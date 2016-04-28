@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Opus|the books you love</title>
+	</head>
+	<body>
+	<h1>Welcome to the world of books</h1><p>Sign Up</p>
+	<h2>Login</h2>
+	<form name='login'>
+		email:<input type='email' name='email'/>
+		password:<input type='password' name='pword'/>
+		<p>forgot your password?</p>
+	</form>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+'use strict';
+function bookapi(connection){
+	var scope=this;
+	scope.getBooks=function(req,res){
+		connection.query("SELECT id,name from books",function(err,books){
+			if(err) throw err;
+
+			if(books.length>0){
+				res.json(books);
+			}
+		});
+	}
+
+	scope.getBookDetails=function(bookId,res){
+		var info=[];
+		connection.query({
+			sql:"SELECT name,description FROM books WHERE books.id=?",
+			values:[bookId]
+		},
+		function (err,results) {
+			if(err) throw err;
+
+			if(results.length>0){
+				info.push(results);
+				connection.query({
+					sql:"SELECT author FROM book_author,authors WHERE book_author.book_id=? AND book_author.author_id=authors.id",
+					values:[bookId]
+				},
+				function(err,results){
+					if(err) throw err;
+
+					if(results.length>0){
+						info.push(results);
+						connection.query({
+							sql:"SELECT genre.name FROM book_genre,genre WHERE book_genre.book_id=? AND book_genre.genre_id=genre.id",
+							values:[bookId]
+						},
+
+						function(err,results){
+							if(err) throw err;
+
+							if(results.length>0){
+								info.push(results);
+								res.send(info);
+							}
+						});
+					}}
+				)
+			}
+		}
+		)
+	}
+}
+
+module.exports=bookapi;

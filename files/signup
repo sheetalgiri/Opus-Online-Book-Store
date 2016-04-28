@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Opus|the books you love</title>
+	</head>
+	<body>
+	<h2>Join in</h2>
+	<form>
+		first name:<input type='text' name='fname'> 
+		last name:<input type='text' name='lname'> 
+		email:<input type='email' name='email'/>
+		birthday:<input type='selector'
+		password:<input type='password' name='pword'/>
+		<p>forgot your password?</p>
+	</form>
+	</body>
+</html>

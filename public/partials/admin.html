@@ -1,0 +1,13 @@
+<form ng-submit="addBook()">
+      Name:<input type='text' ng-model='book.Name'/><br/>
+      Description:<input type='text' ng-model='book.Description'/><br/>
+      Authors:
+    <tags-input ng-model="book.Authors" replace-spaces-with-dashes="false">
+        <auto-complete source="loadAuthorTags($query)"></auto-complete>
+    </tags-input><br/>
+      Genre:
+    <tags-input ng-model="book.Genre" replace-spaces-with-dashes="false">
+        <auto-complete source="loadGenreTags($query)"></auto-complete>
+    </tags-input><br/>
+    <input  class="btn-primary" type='submit' value='Add' />
+</form>

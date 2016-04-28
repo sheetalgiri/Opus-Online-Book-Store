@@ -1,0 +1,59 @@
+<div class="section"> 
+	<div class="container"> 
+	<div class="row">
+	<div class="col-md-4">
+		<img ng-src='{{"img/books/"+bookId+".jpg"}}' class="center-block img-responsive"/>
+	</div>
+	<div class="col-md-8">
+		<h1>{{bookdetails[0].name}}</h1>
+		<h3><a ng-repeat="author in bookdetails[1]" href="/author/{{author_id}}">{{author.author}}</a></h3>
+		<p>{{bookdetails[0].description}}</p>
+		<a class="btn btn-primary">Add to Cart</a>
+		<a class="btn btn-danger" style="opacity: 0.5;">+ Wishlist</a>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-12">
+	<h1>Quotes</h1>
+	</div></div>
+	<div class="row">
+		<div class="col-md-12">
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet</p>
+				<footer>Someone famous </footer>
+			</blockquote>
+			<ul class="pager"><li><a href="#">←  Prev</a></li><li><a href="#">Next  →</a></li></ul>
+		</div>
+	</div>
+	</div>
+</div>
+	
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Reviews</h1>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="media-list">
+				<li class="media">
+					<a class="pull-left" href="#"><img class="media-object" src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" height="64" width="64"></a>
+						<div class="media-body">
+							<h4 class="media-heading">Media heading</h4>
+							<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+						</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="section"><div class="container"><div class="row"><div class="col-md-12"></div></div></div></div>

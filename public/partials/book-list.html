@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	  
+	    	
+	      	<!--Sidebar content
+				Search: <input ng-model="query">
+				Sort by:
+				<select ng-model="orderProp" >
+				  <option value="name">Alphabetical</option>
+				  <option value="age">Newest</option>
+				</select>
+			</div>-->
+	    
+	    	
+		    <!--Body content-->
+			<div class="row">
+				<ul>
+					<li class="col-sm-3" ng-repeat="book in books|filter:query|orderBy:orderProp" >
+						<a href="#/books/{{book.id}}" >
+							<div class="shop-or-wish">
+							<img class="img-thumbnail" ng-src='{{"img/books/"+book.id+".jpg"}}'/>
+								<button type="button" class="btn btn-success" id="cart"><i class="fa fa-plus"></i><i class="fa fa-shopping-cart"></i></button>
+								<button type="button" class="btn btn-warning" id="wishlist"><i class="fa fa-list"></i></button>	
+							</div>
+						</a>
+						<a href="#/books/{{book.id}}">{{book.name}}</a>
+						<p>{{book.author}}</p>
+						
+					</li>
+				</ul>
+			</div>>
+</div>
+	
